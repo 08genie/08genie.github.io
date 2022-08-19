@@ -133,7 +133,7 @@ Github Desktop과 VSCode 설치 완료 후 Github Desktop을 통해 Github Repos
 <br>
 <br>
 
-## Step 4. GitHub에 반영하기
+## Step 4. GitHub에 반영
 ---
 1. Chirpy 테마를 초기화 시켜주기 위해 아래 파일들을 삭제합니다.
     - Gemfile.lock
