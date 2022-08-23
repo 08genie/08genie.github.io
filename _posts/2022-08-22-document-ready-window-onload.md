@@ -57,4 +57,4 @@ tags: [javascript, js, How to, Study, jquery]
 
 ## 실행 결과
 ---
-![Desktop View](/assets/img/2022-08-22/1.PNG){: width="100%" }
+![Desktop View](/assets/img/2022-08-22/1.png){: width="100%" }
