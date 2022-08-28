@@ -37,7 +37,7 @@ Github 저장소에 저장된 html 파일과 같은 정적 웹 문서들을 GitH
 
 ## Step 2. Github Desktop, VSCode 설치
 ---
-**Download** : Github Desktop([**Github Desktop**](https://desktop.github.com)), Github Desktop([**VSCode**](https://code.visualstudio.com))
+**Download** : Github Desktop( <https://desktop.github.com> ), VSCode( <https://code.visualstudio.com> )
 
 **Github Desktop이란?** Windows 에서도 Git 소스를 GUI로 편리하게 관리할 수 있는 Tool
 <br>
@@ -67,9 +67,9 @@ Github Desktop과 VSCode 설치 완료 후 Github Desktop을 통해 Github Repos
 
 ## Step 3. Jekyll 테마 적용 및 Ruby 설치
 ---
-**Download** : jekyll([**jekyll**](http://jekyllthemes.org/)), Ruby([**Ruby**](https://rubyinstaller.org/downloads/))
+**Download** : jekyll( <http://jekyllthemes.org/> ), Ruby( <https://rubyinstaller.org/downloads/> )
 <br>
-**사용테마** : jekyll-theme-chirpy([**jekyll-theme-chirpy**](http://jekyllthemes.org/themes/jekyll-theme-chirpy))
+**사용테마** : jekyll-theme-chirpy( <http://jekyllthemes.org/themes/jekyll-theme-chirpy> )
 <br>
 
 1. 위 Ruby 링크에서 Ruby를 다운로드 받아주세요.
@@ -83,43 +83,43 @@ Github Desktop과 VSCode 설치 완료 후 Github Desktop을 통해 Github Repos
 <br>
 
     아래는 저의 경로입니다. 이전 단계에서 Clone한 경로로 이동하세요.
-    ```
+    ```console
     cd C:\blog\08genie.github.io
     ```
     <br>
 
     만약 ruby 버전이 3.0 이상이라면 webrick을 설치해줍니다.
-    ```
+    ```console
     $ gem install webrick
     ```
     <br>
 
     ruby에 jekyll 을 설치해줍니다.
-    ```
+    ```console
     $ gem install jekyll bundler
     ```
     <br>
 
     jekyll 생성해줍니다. 만약 아래 코드 실행 시 {Clone폴더} is not empty 에러가 뜬다면 해당 폴더에서 .git 폴더를 제외한 모든 파일을 삭제 후 다시 실행해주세요.
-    ```
+    ```console
     $ jekyll new ./
     ```
     <br>
 
     서로 참조관계가 있는 파일을 묶어줍니다.
-    ```
+    ```console
     $ bundle install
     ```
     <br>
 
     만약 ruby 버전이 3.0 이상이라면 아래 코드를 실행해주세요. ruby 3.0 version 부터는 gem에 webrick이 포함되지 않는다고 합니다.
-    ```
+    ```console
     $ bundle add webrick
     ```
     <br>
     
     jekyll 서버를 작동시킵니다.
-    ```
+    ```console
     $jekyll serve
     ```
     모두 실행 완료 되었다면 [**http://127.0.0.1:4000**](http://127.0.0.1:4000) 으로 접속 가능합니다.
@@ -160,7 +160,7 @@ Github Desktop과 VSCode 설치 완료 후 Github Desktop을 통해 Github Repos
 <br>
 
 4. 다시 `Start Command Prompt with Ruby`을 실행해 bundler를 실행합니다.
-```
+```console
 $ bundle install
 ```
 <br>

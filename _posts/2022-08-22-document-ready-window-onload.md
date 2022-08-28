@@ -8,16 +8,16 @@ tags: [javascript, js, How to, Study, jquery]
 
 ## $(document).ready()
 ---
- - 외부 리소스 및 이미지 로딩과 관계 없이 DOM(document object model)트리 생성 직후 실행된다.
- - 중복으로 사용 가능하기때문에 순서대로 실행된다.
+ - 외부 리소스 및 이미지 로딩과 관계 없이 DOM(document object model)트리 생성 직후 실행됩니다.
+ - 중복으로 사용 가능하기때문에 순서대로 실행됩니다.
 <br>
 <br>
 <br>
 
 ## window.onload
 ---
- - 모든 자원의 로딩이 모두 끝난 후에 실행된다.
- - 한 페이지에서 하나의 window.onload 함수만 적용되기 때문에 가장 나중에 호출된 window.onload함수만 실행된다.
+ - 모든 자원의 로딩이 모두 끝난 후에 실행됩니다.
+ - 한 페이지에서 하나의 window.onload 함수만 적용되기 때문에 가장 나중에 호출된 window.onload함수만 실행됩니다.
 <br>
 <br>
 <br>
