@@ -80,6 +80,7 @@ Github Desktop과 VSCode 설치 완료 후 Github Desktop을 통해 Github Repos
 **사용테마**
 - jekyll-theme-chirpy( <http://jekyllthemes.org/themes/jekyll-theme-chirpy> )
 <br>
+<br>
 
 1. 위 Ruby 링크에서 Ruby를 다운로드 받아주세요.
 ![Desktop View](/assets/img/2022-08-13/7.png){: width="100%" } 
