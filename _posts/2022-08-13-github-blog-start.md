@@ -37,9 +37,13 @@ Github 저장소에 저장된 html 파일과 같은 정적 웹 문서들을 GitH
 
 ## Step 2. Github Desktop, VSCode 설치
 ---
-**Download** : Github Desktop( <https://desktop.github.com> ), VSCode( <https://code.visualstudio.com> )
+**Download** 
+- Github Desktop( <https://desktop.github.com> )
+- VSCode( <https://code.visualstudio.com> )
+<br>
+<br>
 
-**Github Desktop이란?** Windows 에서도 Git 소스를 GUI로 편리하게 관리할 수 있는 Tool
+**Github Desktop이란?** Windows 에서도 Git 소스를 GUI로 편리하게 관리할 수 있는 Tool 입니다.
 <br>
 **VSCode란?** Visual Studio Code의 약자로 Microsoft에서 오픈소스로 개발한 소스 코드 에디터입니다. 
 <br>
@@ -67,9 +71,14 @@ Github Desktop과 VSCode 설치 완료 후 Github Desktop을 통해 Github Repos
 
 ## Step 3. Jekyll 테마 적용 및 Ruby 설치
 ---
-**Download** : jekyll( <http://jekyllthemes.org/> ), Ruby( <https://rubyinstaller.org/downloads/> )
+**Download**
+ - jekyll( <http://jekyllthemes.org/> )
+ - Ruby( <https://rubyinstaller.org/downloads/> )
 <br>
-**사용테마** : jekyll-theme-chirpy( <http://jekyllthemes.org/themes/jekyll-theme-chirpy> )
+<br>
+
+**사용테마**
+- jekyll-theme-chirpy( <http://jekyllthemes.org/themes/jekyll-theme-chirpy> )
 <br>
 
 1. 위 Ruby 링크에서 Ruby를 다운로드 받아주세요.
