@@ -87,12 +87,18 @@ public class SampleApplication {
  : @Component와 같은 기능을 하지만 세부적인 이름을 지정함으로써 역할을 정확하게 명시해줍니다.
  : @Controller : 사용자 입출력
  : @Service : 업무단위
- : @Repository(DTO), @Mapper : 데이터를 제공받는 부분
+ : @Repository(DTO) : 데이터를 제공받는 부분
 
->   @Repository와 @Mapper의 차이
+>  @Repository와 @Mapper의 차이
     <br>
-    둘다 DTO층에 사용되어 기능의 차이는 많지 않지만 @Repository는 Spring에 @MapperScan으로 스캔 주소를 설정하여 DTO층의 Bean을 생성해야 합니다. 하지만 @Mapper는 xml에 있는 namespace 의 인터페이스 주소를 통해 Bean을 생성합니다.
+    @Mapper:  SQL을 메소드로 쓰기 위해 SQL 결과를 정의해놓은 모델이고 맵핑하기 위한 이름 그대로의 맵퍼입니다.
+    <br>
+    @Repository:  @Mapper처럼 맵핑하기 위해도 쓰여지지만 DB를 조회 및 조작하는 것에 중점을 둔 개념입니다.
+    <br>
+    그렇기 때문에 @Repository는 @Mapper의 상위 개념입니다.
+    @Repository는 자동으로 Bean 등록이 되며 @Mapper는 아래와 같이 @MapperScan을 같이 사용해주어야 합니다.
 {: .prompt-info }
+
 ```java
 @SpringBootApplication       
 @MapperScan("kr.co.sample.mapper")  
