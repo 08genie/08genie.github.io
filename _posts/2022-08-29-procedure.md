@@ -37,7 +37,7 @@ tags: [MySQL, DB, How to, Study, procedure]
 <br>
 <br>
 
-## 프로시저 속성
+## 프로시저(Procedure) 속성
 ---
 - 파라미터
     - IN    : 프로시저에 값을 전달하기 위해 사용, 프로시저 내부에서 사용 가능
@@ -47,7 +47,7 @@ tags: [MySQL, DB, How to, Study, procedure]
 <br>
 <br>
 
-## 프로시저 예제
+## 프로시저(Procedure) 예제
 ---
 ``ex) 고객이 어떤 물건을 구입했습니다. 구매테이블(buy)에 구매정보가 INSERT되면 재고테이블(stock)에 해당 물건 수량을 UPDATE 시킵니다.``
 ```
@@ -98,7 +98,7 @@ DELIMITER ;
 <br>
 <br>
 
-## 프로시저 호출
+## 프로시저(Procedure) 호출
 ---
 ```
 CALL stockMgmt('램프','genie', @result);
@@ -108,7 +108,7 @@ SELECT @result AS result;
 <br>
 <br>
 
-## 프로시저 결과
+## 프로시저(Procedure) 결과
 ---
 ![Desktop View](/assets/img/2022-08-29/1.png){: width="100%" } 
 

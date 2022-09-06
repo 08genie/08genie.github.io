@@ -2,7 +2,7 @@
 title: "[Github] Blog 만들기"
 author: genie
 date: 2022-08-13 15:24:10 +0900
-categories: [GitHub]
+categories: [형상관리, GitHub]
 tags: [GitHub Blog, GitHub Pages, How to, Study]
 ---
 
