@@ -17,20 +17,20 @@ Google Search Console이란 ? 나의 웹사이트(블로그) 포스팅이 구글
 <br>
 <br>
 
-2. html 파일을 다운로드 한 뒤 블로그의 index.html이 있는 최상위 폴더에 다운로드한 html파일을 넣어 줍니다. Github Desktop을 이용해 commit과 push를 해준 후 확인 버튼을 클릭합니다.
+2. 아래와 같이 ① html 파일 클릭하여 다운로드 한 뒤 ② 블로그 작업폴더에서 최상위 폴더인 index.html이 있는 위치에 다운로드한 html파일을 넣어 줍니다. Github Desktop을 이용해 commit과 push를 해준 후 서치콘솔 페이지로 돌아와 ③ 확인 버튼을 클릭합니다.
 ![Desktop View](/assets/img/2022-09-12/2.png){: width="100%" }
 <br>
 <br>
 <br>
 
-3. 소유권이 확인되었다면 내가 쓴 포스팅이 Google이 읽을 수 있도록 추가적인 작업이 필요합니다. 블로그의 Gemfile 맨 아래 부분에 문구를 추가해줍니다.
+3. 소유권이 확인되었다면 내가 쓴 포스팅이 Google이 읽을 수 있도록 추가적인 작업이 필요합니다. 블로그 작업폴더로 돌아와 이전 단계와 같은 위치에서 Gemfile을 열어 맨 아래 부분에 문구를 추가해줍니다.
 ```
     gem 'jekyll-sitemap'
 ```
 <br>
 <br>
 
-4. ``Start Command Prompt with Ruby``를 실행 후 블로그가 있는 폴더로 이동 한 뒤 아래 명령어를 입력해줍니다.
+4. ``Start Command Prompt with Ruby``를 실행 후 블로그 작업폴더로 이동 한 뒤 아래 명령어를 입력해줍니다.
 ```
     bundle install
 ```
@@ -43,14 +43,14 @@ Google Search Console이란 ? 나의 웹사이트(블로그) 포스팅이 구글
 <br>
 <br>
 
-6. 아래의 명령어를 통해 서버를 실행시키고 [**http://localhost:4000/sitemap.xml**](http://localhost:4000/sitemap.xml)로 접속 후 해당 페이지를 복사합니다.
+6. 아래의 명령어를 통해 서버를 실행시키고 [**http://localhost:4000/sitemap.xml**](http://localhost:4000/sitemap.xml)로 접속 후 해당 페이지를 복사합니다.(페이지가 로딩되지 않는다면 잠시 후 다시 시도해주세요)
 ```
 jekyll serve
 ```
 <br>
 <br>
 
-7. 이전 단계와 동일한 index.html이 있는 폴더에 sitemap.xml 파일을 생성 후 복사한 내용을 붙여넣기 합니다.
+7. 블로그 작업 폴더에서 이전 단계와 동일한 index.html이 있는 위치에 sitemap.xml 파일을 생성 후 복사한 내용을 붙여넣기 합니다.
 <br>
 <br>
 
@@ -73,7 +73,7 @@ jekyll serve
 
 ## Google Analytics
 ---
-Google Analytics이란 ? 나의 웹사이트(블로그)에 누가, 언제 , 얼마나 접속하였는지 여러 요소들을 분석해주는 서비스 입니다.
+Google Analytics란 ? 나의 웹사이트(블로그)에 누가, 언제 , 얼마나 접속하였는지 여러 요소들을 분석해주는 서비스 입니다.
 <br>
 <br>
 
@@ -134,13 +134,13 @@ Google Adsense란 ? 웹사이트(블로그)의 소유자가 자신의 웹 페이
 <br>
 <br>
 
-1. 먼저 [**Google Adsense**](https://www.google.co.kr/adsense/start/)로 이동 후 첫화면에서 ``시작`` 버튼을 클릭 합니다. 그 후 왼쪽 ``정보 입력`` 버튼을 클릭하여 정보를 입력하고 입력 완료 후 오른쪽 ``시작`` 버튼을 클릭합니다. 
+1. 먼저 [**Google Adsense**](https://www.google.co.kr/adsense/start/)로 이동 후 첫화면에서 ``시작`` 버튼을 클릭 합니다. 그 후 왼쪽 ``정보 입력`` 버튼을 클릭하여 정보를 입력하고 입력 완료 후 오른쪽 ``시작하기`` 버튼을 클릭합니다. 
 ![Desktop View](/assets/img/2022-09-12/12.png){: width="100%" }
 <br>
 <br>
 <br>
 
-2. 구글 애드센스 script 코드를 _includes > head.html 파일에 붙여 넣어 줍니다.
+2. 구글 애드센스 script 코드를 복사하여 블로그 작업폴더 > _includes > head.html 파일에 <head> 태그 안 마지막 부분에 붙여 넣어 줍니다.
 ```html
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6399446934234400"
     crossorigin="anonymous"></script>
