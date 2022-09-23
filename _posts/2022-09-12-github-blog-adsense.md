@@ -43,19 +43,19 @@ Google Search Console이란 ? 나의 웹사이트(블로그) 포스팅이 구글
 <br>
 <br>
 
-6. 아래의 명령어를 통해 서버를 실행시키고 [**http://localhost:4000/sitemap.xml**](http://localhost:4000/sitemap.xml)로 접속 후 해당 페이지를 복사합니다.(페이지가 로딩되지 않는다면 잠시 후 다시 시도해주세요)
+6. 아래의 명령어를 통해 서버를 실행시키고 [**http://localhost:4000/sitemap.xml**](http://localhost:4000/sitemap.xml)로 접속 후 해당 페이지를 복사합니다. (페이지가 로딩되지 않는다면 잠시 후 다시 시도해주세요)
 ```
 jekyll serve
 ```
 <br>
 <br>
 
-7. 블로그 작업 폴더에서 이전 단계와 동일한 index.html이 있는 위치에 sitemap.xml 파일을 생성 후 복사한 내용을 붙여넣기 합니다. (sitemap.xml 파일이 이미 생성되어 있다면 그대로 두셔도 괜찮습니다.)
+7. (jekyll 사용자는 생략 가능 합니다. 다음 단계로 넘어가주세요) jekyll 플러그인을 사용하지 않는 github_pages 사용자는 직접 sitemap.xml 파일을 생성해주어야 합니다. 이전 단계와 동일한 index.html이 있는 위치에 sitemap.xml 파일을 만들고 아래 내용을 복사해 넣습니다. 
 <br>
 <br>
 
 
-8. 마지막으로 sitemap.xml이 있는 동일한 위치에 robots.txt 파일을 생성 한 뒤 아래와 같이 내 블로그 주소를 넣고 작성해줍니다.
+8. 마지막으로 이전 단계와 동일한 index.html이 있는 위치에 robots.txt 파일을 생성 한 뒤 아래와 같이 내 블로그 주소를 넣고 작성해줍니다.
 ```
     User-agent: *
     Allow: /
