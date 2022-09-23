@@ -50,7 +50,7 @@ jekyll serve
 <br>
 <br>
 
-7. 블로그 작업 폴더에서 이전 단계와 동일한 index.html이 있는 위치에 sitemap.xml 파일을 생성 후 복사한 내용을 붙여넣기 합니다.
+7. 블로그 작업 폴더에서 이전 단계와 동일한 index.html이 있는 위치에 sitemap.xml 파일을 생성 후 복사한 내용을 붙여넣기 합니다. (sitemap.xml 파일이 이미 생성되어 있다면 그대로 두셔도 괜찮습니다.)
 <br>
 <br>
 
