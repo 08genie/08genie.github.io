@@ -3,7 +3,7 @@ title: "[Github Blog] 블로그(Blog) 만들기"
 author: genie
 date: 2022-08-13 15:24:10 +0900
 categories: [GitHub, Blog]
-tags: [gitHub blog, gitHub pages, How to, study]
+tags: [gitHub blog, 깃블로그, 깃페이지, gitHub pages, How to, study]
 ---
 
 ## Github Blog(깃 블로그)란?

@@ -1,9 +1,9 @@
 ---
-title: "[Github Blog] 구글 서치콘솔(Search Console) & 애널리틱스(Analytics) & 애드샌드(Adsense)"
+title: "[Github Blog] 구글 서치콘솔(Search Console) & 애널리틱스(Analytics) & 애드샌스(Adsense)"
 author: genie
 date: 2022-09-12 21:46:10 +0900
 categories: [GitHub, Blog]
-tags: [gitHub blog, gitHub pages, serarch console, analytics, adsense, How to, study]
+tags: [gitHub blog, gitHub pages, 애드샌스, 서치콘솔, 애널리틱스, serarch console, analytics, adsense, How to, study]
 ---
 
 ## Google Search Console

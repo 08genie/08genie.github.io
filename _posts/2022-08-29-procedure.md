@@ -3,7 +3,7 @@ title: "[MySQL] 프로시저(Procedure) 사용법"
 author: genie
 date: 2022-08-29 22:55:10 +0900
 categories: [Database, MySQL]
-tags: [mysql, db, How to, study, procedure]
+tags: [mysql, db, 프로시저, How to, study, procedure]
 ---
 
 ## 프로시저(Procedure)란?
