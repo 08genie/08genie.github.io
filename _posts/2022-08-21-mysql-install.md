@@ -1,5 +1,5 @@
 ---
-title: "[MySQL] Window 에서 MySQL 설치하기"
+title: "[MySQL] 윈도우(Window) 에서 MySQL 설치하기"
 author: genie
 date: 2022-08-21 20:30:10 +0900
 categories: [Database, MySQL]

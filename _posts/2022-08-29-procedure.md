@@ -1,5 +1,5 @@
 ---
-title: "[MySQL] 프로시저(Procedure) 사용법"
+title: "[MySQL] MySQL 프로시저(Procedure) 사용법"
 author: genie
 date: 2022-08-29 22:55:10 +0900
 categories: [Database, MySQL]

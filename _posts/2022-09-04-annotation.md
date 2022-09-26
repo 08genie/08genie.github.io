@@ -1,5 +1,5 @@
 ---
-title: "[Spring Boot] 어노테이션(Annotation)"
+title: "[Spring Boot] 스프링부트(Spring Boot) 어노테이션(Annotation)"
 author: genie
 date: 2022-09-04 15:49:10 +0900
 categories: [Framework, Spring]

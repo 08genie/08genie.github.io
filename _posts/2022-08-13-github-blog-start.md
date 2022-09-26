@@ -1,5 +1,5 @@
 ---
-title: "[Github Blog] 블로그(Blog) 만들기"
+title: "[Github Blog] 깃블로그(Blog) 만들기"
 author: genie
 date: 2022-08-13 15:24:10 +0900
 categories: [GitHub, Blog]

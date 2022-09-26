@@ -1,5 +1,5 @@
 ---
-title: "[GitLab] 그룹 및 프로젝트 생성하기"
+title: "[GitLab] 깃랩(GitLab) 그룹 및 프로젝트 생성하기"
 author: genie
 date: 2022-09-05 20:46:10 +0900
 categories: [형상관리, GitLab]
