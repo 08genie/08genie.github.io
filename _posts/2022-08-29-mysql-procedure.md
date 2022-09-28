@@ -57,38 +57,47 @@ DROP PROCEDURE IF EXISTS stockMgmt;
 DELIMITER $$
  
 CREATE PROCEDURE stockMgmt
-(IN product_name VARCHAR(20)
-,IN buyer_name VARCHAR(20)
+(IN productNum INT
+,IN buyerName VARCHAR(20)
 ,OUT result INT)
 
 BEGIN
     
     /*변수 선언*/
-    DECLARE quantity INT DEFAULT 0; 
-    
+    DECLARE quantityNum INT DEFAULT 0; 
+
     /* SQL에러 발생시 ROLLBACK */
-	DECLARE EXIT HANDLER FOR SQLEXCEPTION
-	BEGIN
+    DECLARE EXIT HANDLER FOR SQLEXCEPTION
+    BEGIN
         ROLLBACK;
-        SET RESULT = -1;
-	END;
+        SET result = -1;
+    END;
 
     /* 트랜잭션 시작 */
     START TRANSACTION;
-    
-    /*물건을 구입했으므로 stock테이블에 물건 수량을 -1 하여 select*/
-    SET quantity = (SELECT IFNULL(sum(quantity-1),0) AS quantity FROM stock WHERE quantity NOT IN(0));
 
-    /*stock 테이블에 -1한 수량을 update*/
-    UPDATE stock SET quantity = quantity WHERE product_name = product_name;
-    
-    /*buy테이블에 구매정보 insert*/
-    INSERT INTO buy(product_name, buyer_name) VALUES(product_name, buyer_name);
+    /*물건을 구입했으므로 stock테이블에 물건 수량을 -1 하여 select*/
+    SET quantityNum = (SELECT sum(quantity-1) AS quantity FROM stock WHERE product_num = productNum);
+
+    IF quantityNum >=0 THEN
+
+        /*stock 테이블에 -1한 수량을 update*/
+        UPDATE stock SET quantity = quantityNum WHERE product_num = productNum;
+        
+        /*buy테이블에 구매정보 insert*/
+        INSERT INTO buy(product_num, buyer_name) VALUES(productNum, buyerName);
+        
+        /*성공하면 1을 반환*/
+        SET result = 1;
+
+    ELSE
+
+        /*재고가 0이면 -1을 반환*/
+        SET result = -1;
+
+    END IF;
 
     COMMIT;
-
-    /*성공하면 1을 반환*/
-    SET result = 1; 
     
 END $$
  
@@ -101,7 +110,7 @@ DELIMITER ;
 ## 프로시저(Procedure) 호출
 ---
 ```
-CALL stockMgmt('램프','genie', @result);
+CALL stockMgmt(1,'genie', @result);
 SELECT @result AS result; 
 ```
 <br>

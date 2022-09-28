@@ -8,11 +8,11 @@ tags: [flutter, 플러터, 그라데이션, 그라디언트, gradation, gradient
 
 ## 그라디언트(Gradient) 종류
 ---
-**RadialGradient** : 원을 중심으로 퍼지는 그라데이션 효과입니다.
+- **RadialGradient** : 원을 중심으로 퍼지는 그라데이션 효과입니다.
 <br>
-**LinearGradient** : 시작점과 끝점을 지정하여 그라데이션을 만듭니다.
+- **LinearGradient** : 시작점과 끝점을 지정하여 그라데이션을 만듭니다.
 <br>
-**SweepGradient**  : center에서 시작하고 startAngle을 중심으로 스윕 그라데이션을 만듭니다.
+- **SweepGradient**  : center에서 시작하고 startAngle을 중심으로 스윕 그라데이션을 만듭니다.
 <br>
 <br>
 <br>
