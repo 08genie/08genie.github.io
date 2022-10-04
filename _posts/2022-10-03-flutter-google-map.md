@@ -16,13 +16,13 @@ tags: [flutter, 플러터, 구글맵, google, googleMap, map, How to, Study]
 
     >  pub.dev란 ReactNative와 Flutter의 방대한 오픈소스 패키지 입니다.  
     {: .prompt-info }
-![Desktop View](/assets/img/2022-09-28/1.png){: width="100%" }
+![Desktop View](/assets/img/2022-10-03/1.png){: width="100%" }
 <br>
 <br>
 <br>
 
 2. 오른쪽 상단에  ``Get started`` 버튼을 클릭합니다.
-![Desktop View](/assets/img/2022-09-28/2.png){: width="100%" }
+![Desktop View](/assets/img/2022-10-03/2.png){: width="100%" }
 <br>
 <br>
 <br>
@@ -32,19 +32,19 @@ tags: [flutter, 플러터, 구글맵, google, googleMap, map, How to, Study]
 
     >  단순하게 특정 위치의 지도만 표시하는 경우에는 과금이 되지 않습니다. 과금이 되는 대상은 경로를 검색하거나(Directions mode) 스트리트뷰를 사용하거나(Street View mode) 검색기능을 사용(Search mode)할 때 과금 됩니다. 
     {: .prompt-tip }
-![Desktop View](/assets/img/2022-09-28/3.png){: width="100%" }    
+![Desktop View](/assets/img/2022-10-03/3.png){: width="100%" }    
 <br>
 <br>
 <br>
 
 4. 왼쪽 ``사용자 인증정보``탭을 클릭하면 ``Maps API Key``가 발급된 것을 볼 수 있습니다. 키표시 버튼을 클릭하여 API키를 복사합니다. (API키가 발급 되지 않았다면 상단의 ``+ 사용자 인증 정보 만들기``를 클릭하여 API키를 발급해주세요.)
-![Desktop View](/assets/img/2022-09-28/4.png){: width="100%" }
+![Desktop View](/assets/img/2022-10-03/4.png){: width="100%" }
 <br>
 <br>
 <br>
 
 5. 앱은 Android SDK 20 이상을 실행하는 사용자만 사용할 수 있습니다. android > app > build.gradle 파일을 열어 아래와 같이 SDK 최소 버전을 20 으로 변경합니다.
-![Desktop View](/assets/img/2022-09-28/5.png){: width="100%" }
+![Desktop View](/assets/img/2022-10-03/5.png){: width="100%" }
 <br>
 <br>
 <br>
@@ -55,7 +55,7 @@ tags: [flutter, 플러터, 구글맵, google, googleMap, map, How to, Study]
     <meta-data android:name="com.google.android.geo.API_KEY" android:value="YOUR KEY HERE"/>  
     ```
     {: file='/android/app/src/main/AndroidManifest.xml'}
-![Desktop View](/assets/img/2022-09-28/6.png){: width="100%" }
+![Desktop View](/assets/img/2022-10-03/6.png){: width="100%" }
 <br>
 <br>
 <br>
@@ -79,49 +79,49 @@ tags: [flutter, 플러터, 구글맵, google, googleMap, map, How to, Study]
     }
     ```
     {: file='/ios/Runner/AppDelegate.swift'}
-![Desktop View](/assets/img/2022-09-28/7.png){: width="100%" }
+![Desktop View](/assets/img/2022-10-03/7.png){: width="100%" }
 <br>
 <br>
 <br>
 
 8. ``google_maps_flutter`` 페이지로 돌아와 아래와 같이 버튼을 클릭해 코드를 복사합니다.
-![Desktop View](/assets/img/2022-09-28/8.png){: width="100%" }
+![Desktop View](/assets/img/2022-10-03/8.png){: width="100%" }
 <br>
 <br>
 <br>
 
 9. 최상위 폴더에서 pubspec.yaml 파일을 열어 아래와 같이 복사한 코드를 붙여 넣기 합니다. ``geolocator``도 마찬가지로 코드를 복사 붙여넣기 하고 오른쪽 상단의 ``Pub get``을 클릭해 작성 코드를 적용시켜주세요. (Pub get을 클릭하지 않으면 적용되지 않습니다.)
-![Desktop View](/assets/img/2022-09-28/9.png){: width="100%" }
+![Desktop View](/assets/img/2022-10-03/9.png){: width="100%" }
 <br>
 <br>
 <br>
 
 10. ``geolocator`` 페이지로 돌아와 스크롤를 아래로 내립니다. Usage에서 iOS 탭을 클릭해주세요.
-![Desktop View](/assets/img/2022-09-28/10.png){: width="100%" }
+![Desktop View](/assets/img/2022-10-03/10.png){: width="100%" }
 <br>
 <br>
 <br>
 
 11. iOS 장치 위치에 엑세스하기 위해 info.plist 파일에 아래 코드를 추가해야 합니다. 복사 버튼을 클릭해 복사해주세요.
-![Desktop View](/assets/img/2022-09-28/11.png){: width="100%" }
+![Desktop View](/assets/img/2022-10-03/11.png){: width="100%" }
 <br>
 <br>
 <br>
 
 12. ios > Runner > Info.plist 파일을 열어 맨 아래쪽에 복사한 코드를 붙여넣기 합니다. (String 문구는 앱에 맞게 변경 가능 합니다.)
-![Desktop View](/assets/img/2022-09-28/12.png){: width="100%" }
+![Desktop View](/assets/img/2022-10-03/12.png){: width="100%" }
 <br>
 <br>
 <br>
 
 13. 다시 ``geolocator`` 페이지로 돌아와 Usage에서 이번에는 Android 탭을 클릭해주세요. 권한 추가를 위해 아래 코드를 추가해야 합니다. 복사 버튼을 클릭해 복사해주세요.
-![Desktop View](/assets/img/2022-09-28/13.png){: width="100%" }
+![Desktop View](/assets/img/2022-10-03/13.png){: width="100%" }
 <br>
 <br>
 <br>
 
 14. 마지막으로 android/app/src/main/AndroidManifest.xml 파일을 열어 해당 위치에 붙여넣기해주시면 세팅 완료입니다.
-![Desktop View](/assets/img/2022-09-28/14.png){: width="100%" }
+![Desktop View](/assets/img/2022-10-03/14.png){: width="100%" }
 <br>
 <br>
 <br>
@@ -129,7 +129,7 @@ tags: [flutter, 플러터, 구글맵, google, googleMap, map, How to, Study]
 ## 구글맵(Google) 불러오기
 ---
 **Notice** : 안드로이드 스튜디오에서 GooglePlay가 지원되는 시뮬레이터로 테스트 해주세요!
-![Desktop View](/assets/img/2022-09-28/15.png){: width="100%" }
+![Desktop View](/assets/img/2022-10-03/15.png){: width="100%" }
 
 
 
@@ -177,7 +177,7 @@ class _HomeScreenState extends State<HomeScreen> {
   }
 }
 ```
-![Desktop View](/assets/img/2022-09-28/16.png){: width="100%" }
+![Desktop View](/assets/img/2022-10-03/16.png){: width="100%" }
 <br>
 <br>
 <br>
