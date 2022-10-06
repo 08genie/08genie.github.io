@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://08genie.github.io/sitemap
+Sitemap: https://08genie.github.io/sitemap.xml
