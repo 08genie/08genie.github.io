@@ -1,7 +1,7 @@
 ---
 title: "[Koyeb] 코예브(Koyeb)로 깃허브(Github) node.js 프로젝트 배포하기"
 author: genie
-date: 2022-10-13 20:32:10 +0900
+date: 2022-10-13 21:32:10 +0900
 categories: [호스팅, Koyeb]
 tags: [koyeb, 호스팅, 코예브, hosting, How to, Study]
 ---
