@@ -130,3 +130,10 @@ tags: [스프링부트, springboot, 호스팅, 완벽정리, cafe24 호스팅, H
 
 5. 카페24 호스팅 홈페이지로 돌아와 ``톰캣매핑/재시작`` 메뉴에서 ``재시작`` 버튼을 클릭 하면 배포 완료! **신청아이디.cafe24.com** 으로 접속하여 확인 가능 합니다.
 ![Desktop View](/assets/img/2022-10-23/11.png){: width="100%" }
+<br>
+<br>
+<br>
+
+## 스프링부트(Spring Boot) 카페24(cafe24) 호스팅 에러 해결
+---
+[[Cafe24] 스프링부트(Spring Boot) 카페24(cafe24) 호스팅 404,500 에러(error)](https://08genie.github.io/posts/springboot-cafe24-hosting-error/)
