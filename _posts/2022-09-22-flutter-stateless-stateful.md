@@ -2,7 +2,7 @@
 title: "[Flutter] 플러터(Flutter) Stateless Widget 과 Stateful Widget 의 차이점"
 author: genie
 date: 2022-09-22 22:36:10 +0900
-categories: [Framework, Flutter]
+categories: [앱개발, Flutter]
 tags: [flutter, 플러터, 차이점, stateless, stateful, 
 difference, How to, Study]
 ---

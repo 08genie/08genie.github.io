@@ -2,7 +2,7 @@
 title: "[Flutter] 플러터(Flutter) 그라데이션(Gradation)"
 author: genie
 date: 2022-09-26 22:30:10 +0900
-categories: [Framework, Flutter]
+categories: [앱개발, Flutter]
 tags: [flutter, 플러터, 그라데이션, 그라디언트, gradation, gradient, How to, Study]
 ---
 

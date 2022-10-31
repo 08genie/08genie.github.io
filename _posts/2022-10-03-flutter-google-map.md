@@ -2,7 +2,7 @@
 title: "[Flutter] 플러터(Flutter) 구글맵(GoogleMap) 사용하기"
 author: genie
 date: 2022-10-03 15:17:10 +0900
-categories: [Framework, Flutter]
+categories: [앱개발, Flutter]
 tags: [flutter, 플러터, 구글맵, google, googleMap, map, How to, Study]
 ---
 

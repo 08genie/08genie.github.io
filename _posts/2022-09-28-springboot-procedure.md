@@ -2,7 +2,7 @@
 title: "[Spring Boot] 스프링부트 프로시저(Procedure) 사용법"
 author: genie
 date: 2022-09-28 10:48:10 +0900
-categories: [Framework, Spring Boot]
+categories: [웹개발, Spring Boot]
 tags: [mysql, db, springboot, 스프링부트, 프로시저, How to, study, procedure]
 ---
 
