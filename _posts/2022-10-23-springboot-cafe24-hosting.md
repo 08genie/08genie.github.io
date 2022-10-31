@@ -3,7 +3,7 @@ title: "[Cafe24] 스프링부트(Spring Boot) 카페24(cafe24) 호스팅"
 author: genie
 date: 2022-10-23 22:17:10 +0900
 categories: [호스팅, Cafe24]
-tags: [스프링부트, springboot, 호스팅, 완벽정리, cafe24 호스팅, How to, Study]
+tags: [스프링부트, springboot, 호스팅, 완벽정리, cafe24 호스팅]
 ---
 
 ## 카페24(Cafe24) 호스팅 신청

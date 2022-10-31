@@ -3,7 +3,7 @@ title: "[Spring Boot] 스프링부트(Spring Boot) 어노테이션(Annotation)"
 author: genie
 date: 2022-09-04 15:49:10 +0900
 categories: [웹개발, Spring Boot]
-tags: [spring, java, springBoot, 어노테이션, annotation, How to, study]
+tags: [spring, java, springBoot, 어노테이션, annotation]
 ---
 
 ## 어노테이션(Annotation)이란?

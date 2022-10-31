@@ -3,7 +3,7 @@ title: "[jQuery] document.ready()와 window.onload의 차이"
 author: genie
 date: 2022-08-22 10:39:10 +0900
 categories: [Language, JavaScript & jQuery]
-tags: [javascript, js, How to, study, jquery]
+tags: [javascript, js, jquery]
 ---
 
 ## $(document).ready()

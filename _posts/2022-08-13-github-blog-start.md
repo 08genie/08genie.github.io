@@ -3,7 +3,7 @@ title: "[Github Blog] Jekyll 블로그 만들기 (Chirpy 테마)"
 author: genie
 date: 2022-08-13 15:24:10 +0900
 categories: [형상관리, GitHub]
-tags: [gitHub blog, 깃블로그, 깃페이지, Chirpy, gitHub pages, How to, study]
+tags: [gitHub blog, 깃블로그, 깃페이지, Chirpy, gitHub pages]
 ---
 
 ## Github Blog(깃 블로그)란?

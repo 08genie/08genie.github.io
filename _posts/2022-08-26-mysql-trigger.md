@@ -3,7 +3,7 @@ title: "[MySQL] MySQL 트리거(Trigger) 사용법"
 author: genie
 date: 2022-08-26 15:03:10 +0900
 categories: [Database, MySQL]
-tags: [mysql, db, 트리거, How to, study, trigger]
+tags: [mysql, db, 트리거, trigger]
 ---
 
 ## 트리거(Trigger)란?

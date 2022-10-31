@@ -3,7 +3,7 @@ title: "[MySQL] 윈도우(Window) 에서 MySQL 설치하기"
 author: genie
 date: 2022-08-21 20:30:10 +0900
 categories: [Database, MySQL]
-tags: [mysql, db, 설치, install, How to, Study]
+tags: [mysql, db, 설치, install]
 ---
 
 ## MySQL이란?

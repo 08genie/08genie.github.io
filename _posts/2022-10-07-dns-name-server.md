@@ -3,7 +3,7 @@ title: "[IT 용어] 도메인(Domain)과 DNS(Domain Name System, 네임서버)"
 author: genie
 date: 2022-10-07 00:05:10 +0900
 categories: [IT 지식]
-tags: [도메인, domain, DNS, 네임서버, How to, Study]
+tags: [도메인, domain, DNS, 네임서버]
 ---
 
 ## 도메인(Domain)이란?

@@ -3,7 +3,7 @@ title: "[Cafe24] 스프링부트(Spring Boot) 카페24(cafe24) 호스팅 404,500
 author: genie
 date: 2022-10-28 21:19:10 +0900
 categories: [호스팅, Cafe24]
-tags: [스프링부트, springboot, 호스팅, 완벽정리, cafe24 호스팅, 에러, How to, Study]
+tags: [스프링부트, 호스팅, 완벽정리, cafe24 호스팅, 에러]
 ---
 
 로그 확인은 ``tomcat > logs > catalina.날짜`` 파일을 열어 확인 가능합니다.
