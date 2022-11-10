@@ -8,7 +8,7 @@ tags: [앱, 빠르게, apk, 웹사이트]
 
 ## Step 1. 프로젝트 생성
 ---
-**Notice** : 안드로이드 스튜디오([**AndroidStudio**](https://developer.android.com/studio))를 먼저 다운로드 해주세요.
+**Notice** : 안드로이드 스튜디오([**AndroidStudio**](https://developer.android.com/studio){: target="_blank"})를 먼저 다운로드 해주세요.
 <br>
 
 1. 안드로이드 스튜디오를 실행 후 왼쪽 상단에 ``File > New > New Project``를 클릭 후 ``Empty Activity``를 선택 하고 ``Next`` 버튼을 클릭합니다.
