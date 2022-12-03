@@ -1,7 +1,7 @@
 ---
 title: "[AWS] 스프링부트(Spring Boot) AWS EC2 war 배포하기 (3) - FileZilla를 이용한 Spring Boot war 파일 배포"
 author: genie
-date: 2022-12-01 21:35:10 +0900
+date: 2022-12-02 21:35:10 +0900
 categories: [호스팅]
 tags: [aws, war, ec2, deploy, java, tomcat, ubuntu]
 ---
