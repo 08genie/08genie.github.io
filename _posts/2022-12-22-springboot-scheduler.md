@@ -68,20 +68,21 @@ tags: [scheduler, cron, scheduled]
 <br>
 
 2. Scheduler Class를 생성하여 스케줄을 등록합니다.
-```java
-@Slf4j
-@RequiredArgsConstructor //자동 생성자 주입
-@Component
-public class Scheduler {
-	private final CommonMapper commonMapper;
-	
-	@Scheduled(cron = "0 02 12 * * *", zone = "Asia/Seoul") //매일 12시 02분
-	public void statusUpdateTask() throws InterruptedException, SQLException {
-		commonMapper.updateStatus();
-		log.info("do statusUpdateTask" + new Date());
-	}
-}
-```
+    ```java
+    @Slf4j
+    @RequiredArgsConstructor //자동 생성자 주입
+    @Component
+    public class Scheduler {
+        private final CommonMapper commonMapper;
+        
+        @Scheduled(cron = "0 02 12 * * *", zone = "Asia/Seoul") //매일 12시 02분
+        public void statusUpdateTask() throws InterruptedException, SQLException {
+            commonMapper.updateStatus();
+            log.info("do statusUpdateTask" + new Date());
+        }
+    }
+    ```
+    {: file='Scheduler.java'}
 <br>
 <br>
 <br>
