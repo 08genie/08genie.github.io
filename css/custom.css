@@ -1,0 +1,33 @@
+/*!
+* ShareBootstrap.com
+* Licensed under MIT
+*/
+
+@font-face {
+    font-family: 'omyu_pretty';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-01@1.0/omyu_pretty.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: 'omyu_pretty';
+}
+
+.main_btn_box a:first-child {
+    margin-right:2rem;
+}
+
+.hero {
+    height:100vh;
+    padding: 12rem 2rem 1em;
+}
+
+#animal img {
+    width:50%;
+}
+
+#animal .card-body .mb-5{
+    margin-bottom:0 !important;
+    text-align: center;
+}

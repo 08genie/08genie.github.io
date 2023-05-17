@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>띠 나이 계산기</title>
+    <!-- Bootstrap Core CSS -->
+    <link href="/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom Fonts -->
+    <link href="/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="/vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="/css/style.min.css" rel="stylesheet">
+    <link href="/css/custom.css" rel="stylesheet">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <style>
+        #pricing img{
+            width:7rem;
+        }
+
+        #zodiacList .list{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            border-bottom: 1px solid #eeeeee;
+        }
+
+        #zodiacList .list p, h5{
+            width: 30%;
+            margin-top: 1rem;
+        }
+
+        #zodiacDetailRow {
+            justify-content: center;
+        }
+
+        #footer-icon {
+            font-size: 1rem;
+        }
+        
+    </style>
+    <script>
+
+        $(function() {
+            const urlParams        = new URLSearchParams(location.search);
+            const animalName       = urlParams.get('animal');
+            const animalKoreanName = getAnimalKoreanName(animalName);
+            const animalSrc        = getAnimalSrc(animalName);
+            $('#animalName').text(animalKoreanName);
+            $('#animalImg').attr("src", animalSrc);
+            $('#animalImg').attr("alt", animalName);
+
+            const zodiacList = getBirthYearsAndAgesFromZodiac(animalName);
+            const ages = zodiacList.ages;
+            const years = zodiacList.years;
+
+            for(let i=0; i < ages.length; i++) {
+                $("#zodiacList").append("<div class='list'><p>" + years[i] + "년</p><p>"+ages[i]+"세</p></div>");
+            }
+
+        });
+
+        //띠 한글 이름 
+        function getAnimalKoreanName(animalName) {
+            const animalNames = {
+                "mouse": "쥐",
+                "cow": "소",
+                "tiger": "호랑이",
+                "rabbit": "토끼",
+                "dragon": "용",
+                "snake": "뱀",
+                "horse": "말",
+                "sheep": "양",
+                "monkey": "원숭이",
+                "hen": "닭",
+                "dog": "개",
+                "pig": "돼지"
+            };
+        
+        return animalNames[animalName] || "해당하는 동물 이름이 없습니다."; // 매핑되는 한글 이름이 없는 경우 예외 처리
+        }
+
+        //띠 이미지 경로
+        function getAnimalSrc(animalName) {
+            const animalSrcs = {
+                "mouse": "/images/animal/mouse.png",
+                "cow": "/images/animal/cow.png",
+                "tiger": "/images/animal/tiger.png",
+                "rabbit": "/images/animal/rabbit.png",
+                "dragon": "/images/animal/dragon.png",
+                "snake": "/images/animal/snake.png",
+                "horse": "/images/animal/horse.png",
+                "sheep": "/images/animal/sheep.png",
+                "monkey": "/images/animal/monkey.png",
+                "hen": "/images/animal/hen.png",
+                "dog": "/images/animal/dog.png",
+                "pig": "/images/animal/pig.png"
+            };
+        
+        return animalSrcs[animalName] || "해당하는 동물 이미지 경로가 없습니다."; // 매핑되는 동물 이미지가 없는 경우 예외 처리
+        }
+
+        function getBirthYearsAndAgesFromZodiac(zodiac) {
+            const currentYear = new Date().getFullYear();
+            const years = [];
+            const ages = [];
+
+            const zodiacMap = {
+                'mouse': 4,
+                'cow': 5,
+                'tiger': 6,
+                'rabbit': 7,
+                'dragon': 8,
+                'snake': 9,
+                'horse': 10,
+                'sheep': 11,
+                'monkey': 0,
+                'hen': 1,
+                'dog': 2,
+                'pig': 3
+            };
+
+            for (let year = currentYear - 100; year <= currentYear; year++) {
+                const zodiacIndex = (year - 4) % 12;
+                if (zodiacIndex === (zodiacMap[zodiac] - 4 + 12) % 12) {
+                const age = currentYear - year + 1;
+                years.push(year);
+                ages.push(age);
+                }
+            }
+
+            return {
+                years: years.reverse(),
+                ages: ages.reverse()
+            };
+        }
+
+
+    </script>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav id="mainNav" class="navbar navbar-expand-lg navbar-light">
+        <div class="container"> <a class="navbar-brand js-scroll-trigger" href="/index.html">띠 나이 계산기</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"> <a class="nav-link js-scroll-trigger" href="/zodiac.html">띠로 계산</a> </li>
+                    <li class="nav-item"> <a class="nav-link js-scroll-trigger" href="/year.html">출생 연도로 계산</a> </li>
+                    <li class="nav-item"> <a class="nav-link js-scroll-trigger" href="/age.html">만 나이 계산</a> </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Pricing section -->
+    <div class="space-md" id="pricing">
+        <div class="container">
+            <div class="row d-flex justify-content-center mb-md-4 mb-sm-3">
+                <div class="col-md-9 text-center">
+                    <p class="-label">띠로 계산</p>
+                    <h3 class="display-4 font-weight-bold"><span id="animalName"></span>띠</h3>
+                    <p><img id="animalImg" src="" alt=""></p>
+                </div>
+            </div>
+            <div class="row" id="zodiacDetailRow">
+                <!-- end of col  -->
+                <div class="col-md-6">
+                    <div class="card pricing-v3 p-md-5 p-sm-3 text-center">
+                        <div class="" id="zodiacList">
+                            <div class="list">
+                                <h5>출생 연도</h5>
+                                <h5>나이</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end of pricing -->
+                </div>
+                <!-- end of col  -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="pt-5 pb-1 bg-dark">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-auto">
+                    <a class="d-inline-block mb-3 mr-4 text-light" href="/zodiac.html">띠로 찾기</a>
+                    <a class="d-inline-block mb-3 mr-4 text-light" href="/year.html">출생 연도로 찾기</a>
+                    <a class="d-inline-block mb-3 mr-4 text-light" href="/age.html">출생 연도로 찾기</a>
+                </div>
+                <div class="col-lg-auto" id="footer-icon">
+                    <span>아이콘 출처</span><br>
+                    <span>쥐 : <a href="https://www.flaticon.com/free-icons/hamster" title="hamster icons">Hamster icons created by Freepik - Flaticon</a></span>, 
+                    <span>소 : <a href="https://www.flaticon.com/free-icons/cow" title="cow icons">Cow icons created by Freepik - Flaticon</a></span>, 
+                    <span>호랑이 : <a href="https://www.flaticon.com/free-icons/tiger" title="tiger icons">Tiger icons created by Freepik - Flaticon</a></span>, 
+                    <span>토끼 : <a href="https://www.flaticon.com/free-icons/rabbit" title="rabbit icons">Rabbit icons created by Freepik - Flaticon</a></span>, 
+                    <span>용 : <a href="https://www.flaticon.com/free-icons/quetzalcoatl" title="quetzalcoatl icons">Quetzalcoatl icons created by Smashicons - Flaticon</a></span>, 
+                    <span>뱀 :<a href="https://www.flaticon.com/free-icons/snake" title="snake icons">Snake icons created by Freepik - Flaticon</a></span>,
+                    <span>말 : <a href="https://www.flaticon.com/free-icons/horse" title="horse icons">Horse icons created by Freepik - Flaticon</a></span>,
+                    <span>양 :<a href="https://www.flaticon.com/free-icons/sheep" title="sheep icons">Sheep icons created by Freepik - Flaticon</a></span>,
+                    <span>원숭이 : <a href="https://www.flaticon.com/free-icons/monkey" title="monkey icons">Monkey icons created by Freepik - Flaticon</a></span>,
+                    <span>닭 : <a href="https://www.flaticon.com/free-icons/hen" title="hen icons">Hen icons created by Freepik - Flaticon</a></span>,
+                    <span>개 : <a href="https://www.flaticon.com/free-icons/dog" title="dog icons">Dog icons created by Freepik - Flaticon</a></span>,
+                    <span>돼지 : <a href="https://www.flaticon.com/free-icons/pig" title="pig icons">Pig icons created by Freepik - Flaticon</a></span>  
+                </div>
+                
+                <div class="col-12">
+                    <hr class="my-2">
+                </div>
+                <div class="col-lg-auto mt-4">
+                    <h5 class="mb-4 text-white">ShareBootstrap.com</h5>
+                </div>
+
+                <div class="col-lg-auto ml-lg-auto mt-4"><a class="d-inline-block mb-3 mr-4 text-light" href="#">Pricing</a><a class="d-inline-block mb-3 mr-4 text-light" href="#">About</a>
+                    <a class="color-4 mr-4" href="#"></a>
+                </div>
+            </div>
+            <!--/.row-->
+        </div>
+        <!--/.container-->
+    </footer>
+    <!-- Footer -->
+    <footer class="footer text-center">
+        <div class="container"> </div>
+    </footer>
+    <!-- Bootstrap core JavaScript -->
+    <script src="./images/jquery/jquery.min.js"></script>
+    <script src="./images/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- Plugin JavaScript -->
+    <script src="./images/jquery-easing/jquery.easing.min.js"></script>
+    <!-- Custom scripts for this template -->
+    <script src="./images/style.min.js"></script>
+</body>
+
+</html>

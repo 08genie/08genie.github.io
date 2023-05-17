@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>띠 나이 계산기</title>
+    <!-- Bootstrap Core CSS -->
+    <link href="/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom Fonts -->
+    <link href="/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="/vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="/css/style.min.css" rel="stylesheet">
+    <link href="/css/custom.css" rel="stylesheet">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <style>
+        .searchResult {
+            margin-top: 3rem;
+        }
+
+        .searchResult img {
+            width:10%;
+            margin-right:0.5rem;
+        }
+
+        #signup {
+            height:100vh;
+        }
+
+        .searchResult p {
+            font-size:2rem;
+        }
+
+        #footer-icon {
+            font-size: 1rem;
+        }
+    </style>
+    <script>
+
+        //출생 년도로 계산
+        $(document).ready(function() {
+            $("#searchBtn").on("click", function() {
+
+                $(".searchResult").empty();
+
+                const year = $("#year").val();
+
+                if (year == "" || year == undefined) {
+                alert("출생 연도를 입력해주세요.");
+                $("#year").focus();
+                return;
+                }
+                
+
+                const age = calculateAge(year);
+
+                const zodiacKrList = [
+                    "쥐", "소", "호랑이", "토끼", "용", "뱀", "말", "양", "원숭이", "닭", "개", "돼지"
+                ];
+
+                const zodiacList = [
+                    "mouse", "cow", "tiger", "rabbit", "dragon", "snake", "horse", "sheep", "monkey", "hen", "dog", "pig"
+                ];
+
+                const zodiacSrcList = [
+                    "/images/animal/mouse.png","/images/animal/cow.png",
+                    "/images/animal/tiger.png","/images/animal/rabbit.png",
+                    "/images/animal/dragon.png","/images/animal/snake.png",
+                    "/images/animal/horse.png","/images/animal/sheep.png",
+                    "/images/animal/monkey.png","/images/animal/hen.png",
+                    "/images/animal/dog.png","/images/animal/pig.png"
+                ];
+
+                const zodiacIndex = (year - 4) % 12;
+                
+                if(age > 0){
+                    $(".zodiac").append("<div class='searchResult'><h3>검색 결과</h3><p><img src='" + zodiacSrcList[zodiacIndex] + "' alt='" + zodiacList[zodiacIndex] + "'/>" 
+                    + zodiacKrList[zodiacIndex] + "띠, " + age + "세" + "</p></div>");
+                }else {
+                    $(".zodiac").append("<div class='searchResult'><h3>검색 결과</h3><p><img src='" + zodiacSrcList[zodiacIndex] + "' alt='" + zodiacList[zodiacIndex] + "'/>" 
+                    + zodiacKrList[zodiacIndex] + "띠, 아직 태어나지 않았어요!</p></div>");
+                }
+               
+            })
+        });
+
+        function checkInput(input) {
+            let value = input.value.replace(/\D/g, ''); // 숫자가 아닌 문자 제거
+            if (value.length > 4) { // 4자리 이상이면 4자리만 남기고 제거
+                value = value.slice(0, 4);
+            }
+            input.value = value;
+        }
+
+        function calculateAge(birthYear) {
+            const currentYear = new Date().getFullYear();
+            const age = currentYear - birthYear + 1;
+            return age;
+        }
+
+        $(document).keypress(function(e) {
+            if(e.which == 13) { // Enter key code is 13
+                $("#searchBtn").click(); // Replace "your-button-id" with the actual ID of your button
+            }
+        });
+    </script>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav id="mainNav" class="navbar navbar-expand-lg navbar-light">
+        <div class="container"> <a class="navbar-brand js-scroll-trigger" href="/index.html">띠 나이 계산기</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"> <a class="nav-link js-scroll-trigger" href="/zodiac.html">띠로 계산</a> </li>
+                    <li class="nav-item"> <a class="nav-link js-scroll-trigger" href="/year.html">출생 연도로 계산</a> </li>
+                    <li class="nav-item"> <a class="nav-link js-scroll-trigger" href="/age.html">만 나이 계산</a> </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Cta with singup form -->
+    <section class="space-md border-bottom bg-light" id="signup">
+        <div class="mask bg-dark"></div>
+        <div class="container">
+            <div class="row d-flex justify-content-center text-center">
+                <div class="col-lg-8">
+                    <div class="w-85">
+                        <p class="-label">출생 연도로 계산</p>
+                        <h3 class="h1">출생 연도를 입력 하면 띠와 나이를 볼 수 있어요!</h3>
+                        <div class="row row d-flex justify-content-center mt-5">
+                            <div class="col-md-8">
+                                <!-- Input -->
+                                <div class="form-message mb-3">
+                                    <div class="input-group input-group form">
+                                        <input id="year" type="text" oninput="checkInput(this)" class="form-control form__input" name="signupEmail" required="" placeholder="출생연도를 입력해주세요." >
+                                    </div>
+                                </div>
+                                <!-- End Input -->
+                                <button id="searchBtn" type="button" class="btn btn-block btn-gradient">검색</button>
+                                <div class="zodiac">
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer class="pt-5 pb-1 bg-dark">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-auto">
+                    <a class="d-inline-block mb-3 mr-4 text-light" href="/zodiac.html">띠로 찾기</a>
+                    <a class="d-inline-block mb-3 mr-4 text-light" href="/year.html">출생 연도로 찾기</a>
+                    <a class="d-inline-block mb-3 mr-4 text-light" href="/age.html">출생 연도로 찾기</a>
+                </div>
+                <div class="col-lg-auto" id="footer-icon">
+                    <span>아이콘 출처</span><br>
+                    <span>쥐 : <a href="https://www.flaticon.com/free-icons/hamster" title="hamster icons">Hamster icons created by Freepik - Flaticon</a></span>, 
+                    <span>소 : <a href="https://www.flaticon.com/free-icons/cow" title="cow icons">Cow icons created by Freepik - Flaticon</a></span>, 
+                    <span>호랑이 : <a href="https://www.flaticon.com/free-icons/tiger" title="tiger icons">Tiger icons created by Freepik - Flaticon</a></span>, 
+                    <span>토끼 : <a href="https://www.flaticon.com/free-icons/rabbit" title="rabbit icons">Rabbit icons created by Freepik - Flaticon</a></span>, 
+                    <span>용 : <a href="https://www.flaticon.com/free-icons/quetzalcoatl" title="quetzalcoatl icons">Quetzalcoatl icons created by Smashicons - Flaticon</a></span>, 
+                    <span>뱀 :<a href="https://www.flaticon.com/free-icons/snake" title="snake icons">Snake icons created by Freepik - Flaticon</a></span>,
+                    <span>말 : <a href="https://www.flaticon.com/free-icons/horse" title="horse icons">Horse icons created by Freepik - Flaticon</a></span>,
+                    <span>양 :<a href="https://www.flaticon.com/free-icons/sheep" title="sheep icons">Sheep icons created by Freepik - Flaticon</a></span>,
+                    <span>원숭이 : <a href="https://www.flaticon.com/free-icons/monkey" title="monkey icons">Monkey icons created by Freepik - Flaticon</a></span>,
+                    <span>닭 : <a href="https://www.flaticon.com/free-icons/hen" title="hen icons">Hen icons created by Freepik - Flaticon</a></span>,
+                    <span>개 : <a href="https://www.flaticon.com/free-icons/dog" title="dog icons">Dog icons created by Freepik - Flaticon</a></span>,
+                    <span>돼지 : <a href="https://www.flaticon.com/free-icons/pig" title="pig icons">Pig icons created by Freepik - Flaticon</a></span>  
+                </div>
+                
+                <div class="col-12">
+                    <hr class="my-2">
+                </div>
+                <div class="col-lg-auto mt-4">
+                    <h5 class="mb-4 text-white">ShareBootstrap.com</h5>
+                </div>
+
+                <div class="col-lg-auto ml-lg-auto mt-4"><a class="d-inline-block mb-3 mr-4 text-light" href="#">Pricing</a><a class="d-inline-block mb-3 mr-4 text-light" href="#">About</a>
+                    <a class="color-4 mr-4" href="#"></a>
+                </div>
+            </div>
+            <!--/.row-->
+        </div>
+        <!--/.container-->
+    </footer>
+    <!-- Footer -->
+    <footer class="footer text-center">
+        <div class="container"> </div>
+    </footer>
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- Plugin JavaScript -->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+    <!-- Custom scripts for this template -->
+    <script src="js/style.min.js"></script>
+</body>
+
+</html>
